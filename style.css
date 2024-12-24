@@ -1,0 +1,224 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(images/AppleOrchard.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    }
+header{
+    background-color: #2e2b2b;
+    top:0;
+    height: 80px;
+    width:100%; 
+    position:fixed;
+    padding: 10px;
+}
+header h1{
+    color: white;
+    position:fixed;
+    left: 5vw;
+    top:10px;
+    line-height: 30px;
+    font-size: 30px;
+}   
+.original ul{
+    position: fixed;
+    right: 5vw;
+    top:0;
+    line-height: 70px;
+}
+.original li {
+    display: inline;
+    margin-right: 4vw;
+}
+.original a{
+    color: white;
+    text-decoration: none;
+}
+.original a:hover{
+    text-decoration: underline;
+}
+
+.pick h1{
+    /* background-color: whitesmoke; */
+    position: relative;
+    top:180px;
+    height: 120px;
+    padding: 60px;
+    text-align: center;
+    font-size: 50px;
+    color: #090808;
+    letter-spacing: 2px;
+    font-weight: 550;
+}
+.apples ul{
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+}
+.apples li{
+    position:relative;
+}
+.mask {
+    position: absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mask h3{
+    font-size: 15px;
+}
+.box{
+    width: 450px;
+    position:relative;
+    top: 80px;
+    bottom: 30px;
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    text-align: center;
+    margin:auto;
+    margin-top: 5%;
+    color:white;
+    font-family: 'Century-Gothic',sans-serif;
+}
+.box-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 10px,0;
+}
+.box h1{
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    line-height: 0.2em;
+}
+.box h5{
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight:100;
+    line-height: 0.2em;
+}
+.box p{
+    text-align:center;
+}
+.box ul{
+    margin:0;
+    padding:0;
+}
+.box li{
+    display: inline-block;
+    margin: 3px;
+    list-style:none;
+}
+.box li a{
+    color: white;
+    text-decoration:none;
+    font-size: 40px;
+    transition: all ease-in-out 250ms;
+}
+.box li a:hover{
+    color: #b9b9b9;
+}
+
+footer{
+    background-color:none;
+    width:100%;
+    height: 25px;
+    position: fixed;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+footer a{
+    text-decoration: none;
+    color:white;
+}
+footer p{
+    color:white;
+}
+.menu{
+    display: none;
+}
+.navbar{
+    background-color: #2e2b2b;
+    position:fixed;
+    left: 2vw;
+    top:100px;
+    height: 120px;
+    width:200px; 
+    padding: 0px;
+    z-index:999;
+    display: none;
+}
+/* .navbar_case {
+    z-index: 999;
+} */
+.navbar_menu {
+    list-style:none;
+    font-size: 20px;
+    line-height: 40px;
+}
+/* .navbar_menu li {
+    display:flow-root;
+    margin-right: 4vw;
+} */
+.navbar_menu a{
+    color: white;
+    text-decoration: none;
+}
+.navbar_menu a:hover{
+    text-decoration: underline;
+}
+/* 响应式设计语法 */
+@media screen and (max-width:768px){
+    body{
+        background: url(images/AppleOrchard.jpg) no-repeat;
+        background-size:cover;
+        }
+    .original ul{
+        display:none;
+    }
+    .navbar{
+        display:block;
+        opacity: 1;
+        z-index:-1;
+    }
+    .navbar_menu.active{
+        opacity: 1;
+        z-index:99;
+        transition: all 0.5s ease;
+    }
+    header h1{
+        left: 50%;
+        transform:translateX(-50%);
+    }
+    .pick h1{
+        font-size: 40px;
+    }
+    .box-img{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    .menu{
+        display: block;
+        background-color:transparent;
+        color:rgb(255, 255, 255);
+        font-size: 35px;
+        position: absolute;
+        top:15px;
+        left:20px;
+        border:none;
+        cursor:pointer;
+    }
+}
